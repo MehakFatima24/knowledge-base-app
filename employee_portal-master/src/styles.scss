@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+//import bootstrap style
+@import '~bootstrap/dist/css/bootstrap.min.css';
+//import coreui style
+@import "~@coreui/coreui/scss/coreui.scss";
+
+//import component styles
+@import "src/app/views/login/login.component.scss";
+
+//import icons
+@import "~@coreui/icons/css/coreui-icons.css";
+@import "~flag-icon-css/css/flag-icon.css";
+@import "~simple-line-icons/css/simple-line-icons.css";
+
+//custom style
+app-sidebar-nav{
+  margin-top: 60px;
+}
+app-sidebar{
+  height: 100%;
+}

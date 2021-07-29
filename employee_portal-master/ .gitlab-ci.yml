@@ -1,0 +1,29 @@
+image: node:latest
+
+cache:
+  paths:
+  - node_modules/
+
+build:
+  stage: build
+  script:
+   - npm i @angular/cli
+   - npm install
+   - ng build --prod --base-href . --output-path www/
+  artifacts:
+    paths:
+      -  www/
+
+pages:
+  stage: deploy
+  dependencies:
+    - build
+  script:
+    - ls
+    - mv www/ public
+    - ls public/
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days
+
